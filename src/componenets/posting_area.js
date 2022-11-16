@@ -5,7 +5,8 @@ export default function Posting_area() {
     setText(event.target.value);
   };
 
-  const handleOnclick = () => {
+  const handleOnclick = (e) => {
+    e.preventDefault();
     setText("On clicked function called");
   };
   const [text, setText] = useState("Hlo world");
@@ -16,7 +17,7 @@ export default function Posting_area() {
 
       <div style={{ marginTop: "100px" }}>
         <div className="mb-3">
-          <form action>
+          <form>
             <label htmlFor="exampleFormControlTextarea1" className="form-label" style={{margin:'20px'}}>
               Need some comrades ??
             </label>
