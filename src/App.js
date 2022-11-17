@@ -1,25 +1,25 @@
 // import logo from './logo.svg';
-import Navbar from './componenets/navbar.js'
+import Navbar from "./componenets/navbar.js";
+import Home from "./componenets/HomePage";
+import React from "react";
+import SearchList from "./componenets/searchPage.js";
+import { BrowserRouter as Router,
+   Routes,
+   Route} from "react-router-dom";
 
-import Post_displayer from './componenets/post_displayer.js';
-import Posting_area from './componenets/posting_area';
-import React  from 'react';
-
-import './App.css';
-
+import "./App.css";
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <div className='container'>
-     <Posting_area/>
-     <hr/>
-     <Post_displayer array={[]}/>
-    </div>
-
-    </> 
-    
+      <Router>
+        <Navbar />
+         <Routes>
+          <Route strict path="/" element={<Home arrays={['pofaofkafo1','pofaofkafo1','pofaofkafo1','pofaofkafo1','pofaofkafo1','pofaofkafo1','pofaofkafo1','pofaofkafo1','pofaofkafo1','pofaofkafo1']} />} /> 
+          <Route strict path="/search" element={<SearchList />} />
+         </Routes>
+      </Router>
+      </>
   );
 }
 

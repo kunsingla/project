@@ -1,12 +1,12 @@
 import React from "react";
-import Post_content from "./post-content";
+import PostContent from "./PostContent";
 
 export default function post_displayer(probes) {
   if (probes.array.length === 0) {
     return (
       <>
         <div
-          className="row-12 w-100 h-100"
+          className=" container row-12 w-100 h-100"
           style={{
             backgroundColor: "#B2B2B2",
             boxShadow:
@@ -23,7 +23,7 @@ export default function post_displayer(probes) {
     );
   } else {
     return probes.array.map((element) => {
-      return <Post_content description={element} />;
+      return <PostContent description={element} />;
     });
   }
 }

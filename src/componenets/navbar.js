@@ -1,13 +1,18 @@
-import React from "react";
+import React  from "react";
+// import SearchList from "./search_list";
+import { Link } from "react-router-dom";
+
 
 export default function navbar() {
+
+  
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light fixed-top" >
+      <nav className="navbar navbar-expand-lg bg-light fixed-top shadow p-3 mb-5 bg-body rounded" >
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             Let Me Search
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -45,15 +50,14 @@ export default function navbar() {
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item me-5">
                   <div>
-                    <a
-                      href="/"
-                      className="btn btn-outline-primary mt-2 form-control d-flex px-sm-auto"
+                    <Link
+                      className="btn btn-outline-primary mt-3 form-control d-flex px-sm-auto"
                       aria-current="page"
-                      role="button"
+                      to="/search"
                       style={{ padding: "5px 100px" }}
                     >
                       <span className="justify-content-centre">Search</span>
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="nav-item me-3 mt-2">
@@ -61,7 +65,7 @@ export default function navbar() {
                     type="button"
                     className="btn btn-outline-secondary mb-2"
                   >
-                    <a href="/" className="fs-4 mt-3s me-3 ">
+                    <Link className="fs-4 mt-3s me-3 " to="/">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={16}
@@ -74,13 +78,13 @@ export default function navbar() {
                         <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
                       </svg>
                       chat
-                    </a>
+                    </Link>
                   </button>
                 </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="/"
+                <li className="nav-item dropdown mt-3">
+                  <Link
+                    className="nav-a dropdown-toggle"
+                    to="/"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -95,22 +99,22 @@ export default function navbar() {
                     <span className="ms-2">
                      User name
                     </span>
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <Link className="dropdown-item" to="/">
                         Profile settings
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <Link className="dropdown-item" to="/">
                         Account and security
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <Link className="dropdown-item" to="/">
                         Log Out
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
